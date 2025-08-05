@@ -1,0 +1,195 @@
+/* ... (todo tu CSS existente va aquí arriba) ... */
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fdd55c;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  min-height: 100vh;
+  gap: 30px; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* --- ESTILOS DEL NUEVO BANNER-LOGO --- */
+.site-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-wrapper {
+  position: relative; /* Clave para que el zorrito se posicione correctamente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-title {
+  font-family: 'Bebas Neue', sans-serif; /* Usamos la fuente de impacto */
+  background-color: white;
+  color: black;
+  padding: 20px 70px 10px 140px; /* Más padding a la izquierda para el zorrito */
+  border-radius: 12px;
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.zorrito-banner {
+  position: absolute; /* Se posiciona relativo al 'logo-wrapper' */
+  top: 50%;
+  left: -20px; /* Lo empujamos desde la izquierda */
+  transform: translateY(-50%) rotate(-10deg); /* Lo centramos verticalmente y lo giramos un poco */
+  height: 120px;
+  width: auto;
+  z-index: 11; /* Para que esté por encima de la caja blanca */
+  transition: transform 0.3s ease;
+}
+
+.logo-wrapper:hover .zorrito-banner {
+    transform: translateY(-50%) rotate(0deg) scale(1.05); /* El zorrito saluda al pasar el ratón */
+}
+/* --- FIN ESTILOS DEL BANNER --- */
+
+
+.inicio-container {
+  text-align: center;
+}
+
+.titulo {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #000;
+  border: 2px solid black;
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.modulos-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+  justify-content: center;
+  width: 500px;
+}
+
+.modulo {
+  background-color: #fff;
+  border: 2px solid #000;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 4px 4px 0px #000;
+}
+.modulo.ejercicios {
+  grid-column: span 2; /* Hace que el módulo de ejercicios ocupe dos columnas */
+  /* Otras propiedades específicas para el módulo de ejercicios */
+}
+.modulo:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 8px 8px 0px #000;
+}
+
+.modulo:active {
+  transform: scale(1) translateY(0px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.cuadrado { background-color: #d22f2f; }
+.rectangulo { background-color: #d22f2f; width: 50px; height: 25px; margin-top: 10px; }
+.triangulo { width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-bottom: 35px solid #d22f2f; }
+.circulo { border: 5px solid #d22f2f; border-radius: 50%; width: 35px; height: 35px; }
+.modulo.ejercicios img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0;
+}
+
+.background-shapes-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.shape {
+  position: absolute;
+  opacity: 0.7;
+}
+
+.s1 { background-color: #4a86e8; width: 20px; height: 20px; border-radius: 5px; top: 15%; left: 10%; animation: float 10s ease-in-out infinite; }
+.s2 { border: 3px solid #ff7675; width: 15px; height: 15px; border-radius: 50%; top: 80%; left: 20%; animation: float 8s ease-in-out infinite 1s; }
+.s3 { width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 15px solid #38d39f; top: 10%; left: 85%; animation: float-rotate 12s linear infinite; }
+.s4 { background-color: #ffa726; width: 30px; height: 15px; border-radius: 5px; top: 85%; left: 80%; animation: float 9s ease-in-out infinite 2s; }
+.s5 { background-color: #ec407a; width: 15px; height: 15px; border-radius: 50%; top: 5%; left: 30%; animation: float 7s ease-in-out infinite 0.5s; }
+.s6 { background-color: #ab47bc; width: 18px; height: 18px; border-radius: 5px; top: 50%; left: 5%; animation: float-rotate 15s linear infinite 3s; }
+.s7 { border: 3px solid #4a86e8; width: 25px; height: 25px; border-radius: 50%; top: 60%; left: 90%; animation: float 11s ease-in-out infinite 1.5s; }
+.s8 { width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 15px solid #ff7675; top: 88%; left: 40%; animation: float 8s ease-in-out infinite; }
+.s9 { background-color: #38d39f; width: 10px; height: 10px; border-radius: 3px; top: 30%; left: 60%; animation: float-rotate 10s linear infinite 2.5s; }
+.s10 { background-color: #ffa726; width: 20px; height: 20px; border-radius: 50%; top: 45%; left: 45%; animation: float 13s ease-in-out infinite; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes float-rotate {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(180deg); }
+  100% { transform: translateY(0) rotate(360deg); }
+}
+
+/* --- ESTILOS PARA EL BOTÓN DE REGRESO (AÑADIDO) --- */
+.back-to-home-btn {
+  position: fixed; /* Se mantiene en el mismo lugar de la pantalla */
+  bottom: 25px;
+  left: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%; /* Lo hace circular */
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem; /* Tamaño del icono */
+  text-decoration: none;
+  box-shadow: 4px 4px 0px #000; /* Sombra consistente con los módulos */
+  transition: transform 0.2s, box-shadow 0.2s;
+  z-index: 100; /* Se asegura de que esté por encima de otros elementos */
+}
+
+.back-to-home-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 8px 8px 0px #000;
+}
+
+.back-to-home-btn:active {
+  transform: translateY(0) scale(1);
+  box-shadow: 2px 2px 0px #000;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoKids - El Cuadrado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/cuadrado.css">
+</head>
+<body>
+    <div class="browser-window">
+        <header class="main-header">
+            <div class="logo-title-group">
+                <div class="logo"></div>
+                <h1>El Cuadrado</h1>
+            </div>
+            <a href="inicio.html" class="home-button" title="Home">🏠</a>
+        </header>
+        <nav class="main-nav">
+            <button data-tab="aprender" class="active">Aprender</button>
+            <button data-tab="calcular">Calcular</button>
+            <button data-tab="practicar">Practicar</button>
+        </nav>
+        <main>
+            <!-- Aprender Section -->
+            <section id="aprender-content" class="content-section active">
+                <div class="info-section">
+                    <div>
+                        <h2>¿Qué es un Cuadrado?</h2>
+                        <div class="cute-square"><div class="mouth"></div></div>
+                        <p>Un cuadrado es una figura perfecta y equilibrada. ¡Tiene 4 lados que miden exactamente lo mismo y 4 esquinas súper rectas!</p>
+                    </div>
+                </div>
+                <!-- NUEVA SECCIÓN DE TEORÍA -->
+                <h2>¡Los Superpoderes del Cuadrado!</h2>
+                <div class="properties-grid">
+                    <div class="property-card card-sides">
+                        <h4>📏 4 Lados Iguales</h4>
+                        <p>Todos sus lados miden exactamente lo mismo. ¡Ni un centímetro más, ni uno menos!</p>
+                    </div>
+                    <div class="property-card card-angles">
+                        <h4>📐 4 Esquinas Perfectas</h4>
+                        <p>Sus cuatro esquinas son "ángulos rectos" (90°), como las esquinas de un libro o un celular.</p>
+                    </div>
+                    <div class="property-card card-special">
+                        <h4>🤫 Es un Rectángulo Especial</h4>
+                        <p>Un cuadrado es como un rectángulo, ¡pero uno muy especial donde todos los lados decidieron ser iguales!</p>
+                    </div>
+                </div>
+                <div class="formulas-section">
+                    <h3>📝 Fórmulas del Cuadrado</h3>
+                    <div class="formulas-content-wrapper">
+                        <div class="formula-box">
+                            <h4>Perímetro (el borde)</h4>
+                            <p>Perímetro = 4 × Lado</p>
+                        </div>
+                        <div class="formula-box">
+                            <h4>Área (lo de adentro)</h4>
+                            <p>Área = Lado × Lado</p>
+                        </div>
+                    </div>
+                     <div class="formulas-content-wrapper" style="margin-top: 15px;">
+                        <div class="reminder-box">
+                            <p>💡 <strong>Recuerda:</strong> ¡Piensa en una ventana cuadrada! El <strong>perímetro</strong> es todo el marco. El <strong>área</strong> es todo el cristal por donde miras.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Calcular Section -->
+            <section id="calcular-content" class="content-section">
+                <div class="calculator-wrapper">
+                    <h2>Calculadora Interactiva</h2>
+                    <div class="visual-square-container">
+                        <div id="visual-square"></div>
+                    </div>
+                    <div class="slider-group">
+                        <label for="side-slider">¡Mueve la barra para cambiar el tamaño! Lado: <span id="slider-value">50</span> cm</label>
+                        <input type="range" id="side-slider" min="10" max="150" value="50">
+                    </div>
+                    <div id="results-area"></div>
+                    <div id="conversion-area"></div>
+                </div>
+            </section>
+            <!-- Practicar Section -->
+            <section id="practicar-content" class="content-section">
+                <h2>⭐ ¡A Practicar!</h2>
+                <div class="exercise-grid">
+                    <div class="exercise-card">
+                        <h4>🎲 Un Dado</h4>
+                        <p>Una cara de un dado es cuadrada y mide 2 cm por lado. ¿Cuál es su área y perímetro?</p>
+                    </div>
+                     <div class="exercise-card">
+                        <h4>🖼️ Marco de Foto</h4>
+                        <p>Un marco de foto cuadrado mide 25 cm por lado. ¿Cuál es el área de la foto que puede contener?</p>
+                    </div>
+                     <div class="exercise-card">
+                        <h4>♟️ Tablero de Ajedrez</h4>
+                        <p>El perímetro de un tablero de ajedrez cuadrado es de 160 cm. ¿Cuánto mide cada lado?</p>
+                    </div>
+                     <div class="exercise-card">
+                        <h4>🧩 Desafío Final</h4>
+                        <p>Si el área de un jardín cuadrado es de 81 m², ¿cuál es su perímetro?</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="js/cuadrado.js"></script>
+</body>
+</html>

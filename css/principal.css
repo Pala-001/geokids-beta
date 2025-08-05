@@ -1,0 +1,288 @@
+/* --- Importación de Fuentes y Estilos Base --- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background: radial-gradient(circle, #f9d96b, #f4c542);
+  overflow: hidden;
+}
+
+/* --- Contenedor Principal --- */
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* --- Título Principal GEOKIDS --- */
+.geokids-title {
+  background-color: white;
+  padding: 15px 40px;
+  border-radius: 12px;
+  font-size: clamp(36px, 10vw, 72px); /* Responsive font size */
+  font-weight: 900;
+  color: #333;
+  z-index: 10;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.geokids-title:hover {
+  transform: scale(1.03);
+}
+
+/* --- El zorrito de Origami (MODIFICADO Y FIJO) --- */
+.zorrito {
+  position: absolute;
+  top: 25%; /* Ajustado para bajar la posición */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11; /* Mantenido para estar sobre el título */
+  /* Se ha eliminado la propiedad "animation" para que esté fijo */
+}
+
+.zorrito img {
+  width: 300px; /* Tamaño ajustado para coincidir con la imagen de referencia */
+  transition: transform 0.3s ease;
+}
+
+.zorrito:hover img {
+    transform: rotate(10deg) scale(1.1);
+}
+
+
+/* --- Contenedor de las figuras geométricas --- */
+.shape-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* --- Estilos base para todas las figuras --- */
+.shape {
+  position: absolute;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.shape:hover {
+  transform: scale(1.2) rotate(15deg);
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.rectangle {
+  border-radius: 8px;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+}
+
+/* --- Definiciones específicas de cada figura (colores, posición y animación) --- */
+.blue {
+  background-color: #4a86e8;
+  width: 70px;
+  height: 70px;
+  top: 15%;
+  left: 10%;
+  animation: float 8s ease-in-out infinite;
+}
+
+.yellow {
+  background-color: #ffd966;
+  width: 180px;
+  height: 180px;
+  top: 20%;
+  left: 18%;
+  animation: float 12s ease-in-out infinite 1s;
+}
+
+.red-small {
+  background-color: #ff4d4d;
+  width: 45px;
+  height: 45px;
+  top: 28%;
+  left: 35%;
+  animation: float-rotate 10s linear infinite;
+}
+
+.green {
+  background-color: #38d39f;
+  width: 90px;
+  height: 90px;
+  top: 68%;
+  left: 12%;
+  animation: float 9s ease-in-out infinite 0.5s;
+}
+
+.red.triangle {
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  border-bottom: 150px solid #ff7675;
+  top: 60%;
+  left: 75%;
+  animation: float 7s ease-in-out infinite 1.5s;
+}
+
+/* --- NUEVAS FIGURAS --- */
+.circle.purple-light {
+  background-color: #ab47bc;
+  width: 60px;
+  height: 60px;
+  top: 70%;
+  left: 85%;
+  animation: float 10s ease-in-out infinite 2s;
+}
+
+.rectangle.teal {
+  background-color: #26a69a;
+  width: 150px;
+  height: 70px;
+  top: 10%;
+  left: 65%;
+  animation: float-rotate 14s linear infinite 1.8s;
+}
+
+.square.orange-small {
+  background-color: #ffa726;
+  width: 40px;
+  height: 40px;
+  top: 85%;
+  left: 45%;
+  animation: float 8s ease-in-out infinite 2.5s;
+}
+
+.circle.pink {
+    background-color: #ec407a;
+    width: 25px;
+    height: 25px;
+    top: 15%;
+    left: 40%;
+    animation: float 6s ease-in-out infinite 0.3s;
+}
+
+/* --- Botón de Comenzar --- */
+.start-button {
+  position: relative;
+  z-index: 10;
+  margin-top: 20px;
+  font-size: clamp(18px, 5vw, 28px);
+  padding: 12px 30px;
+  border: none;
+  background-color: white;
+  color: #333;
+  border-radius: 50px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: pulse-button 2.5s infinite;
+}
+
+.start-button span {
+  margin-left: 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.start-button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #fffbe8;
+  animation-play-state: paused;
+}
+
+.start-button:hover span {
+  transform: rotate(90deg);
+}
+
+.start-button:active {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Definiciones de Animaciones (Keyframes) --- */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes float-rotate {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+  100% { transform: translateY(0) rotate(360deg); }
+}
+
+@keyframes pulse-button {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* --- Media Queries para Responsividad --- */
+@media (max-width: 768px) {
+  .geokids-title {
+    font-size: clamp(24px, 8vw, 48px);
+    padding: 10px 20px;
+  }
+
+  .zorrito img {
+    width: 150px; /* Tamaño ajustado para tablet */
+  }
+
+  .start-button {
+    margin-top: 15px;
+    font-size: clamp(14px, 4vw, 20px);
+    padding: 10px 25px;
+  }
+
+  .shape-container .shape {
+    transition: none; /* Disable hover effects on small screens */
+  }
+
+  .blue { width: 50px; height: 50px; }
+  .yellow { width: 120px; height: 120px; }
+  .red-small { width: 30px; height: 30px; }
+  .green { width: 60px; height: 60px; }
+  .red.triangle { border-bottom-width: 100px; }
+  .circle.purple-light { width: 45px; height: 45px; }
+  .rectangle.teal { width: 100px; height: 50px; }
+  .square.orange-small { width: 30px; height: 30px; }
+}
+
+@media (max-width: 480px) {
+  .geokids-title {
+    font-size: clamp(20px, 6vw, 36px);
+  }
+
+  .zorrito img {
+    width: 150px; /* Tamaño ajustado para móvil */
+  }
+
+  .start-button {
+    margin-top: 10px;
+    padding: 8px 20px;
+  }
+}

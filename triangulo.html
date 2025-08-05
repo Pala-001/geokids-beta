@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoKids - El Triángulo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/triangulo.css">
+</head>
+<body>
+    <div class="browser-window">
+        <header class="main-header">
+            <div class="logo-title-group">
+                <div class="logo"></div>
+                <h1>El Triángulo</h1>
+            </div>
+            <a href="inicio.html" class="home-button" title="Home">🏠</a>
+        </header>
+        <nav class="main-nav">
+            <button data-tab="aprender" class="active">Aprender</button>
+            <button data-tab="calcular">Calcular</button>
+            <button data-tab="practicar">Practicar</button>
+        </nav>
+        <main>
+            <!-- Aprender Section -->
+            <section id="aprender-content" class="content-section active">
+                <div class="info-section">
+                    <div>
+                        <h2>¿Qué es un Triángulo?</h2>
+                        <div class="cute-triangle"></div>
+                        <p>Un triángulo es una figura con tres lados, tres vértices y tres ángulos. ¡La suma de sus ángulos siempre es 180°, como medio círculo!</p>
+                    </div>
+                </div>
+                <div class="formulas-section">
+                    <h3>Fórmulas Mágicas del Triángulo</h3>
+                    <div class="formulas-content-wrapper">
+                        <div class="formulas-container">
+                            <div class="formula-box">
+                                <h4>📏 Perímetro</h4>
+                                <p>Perímetro = Lado A + Lado B + Lado C</p>
+                            </div>
+                            <div class="formula-box">
+                                <h4>🔲 Área</h4>
+                                <p>Área = (base × altura) / 2</p>
+                            </div>
+                        </div>
+                        <div class="reminder-box">
+                            <p>💡 <strong>Recuerda:</strong> ¡Piensa en una rebanada de pizza! El <strong>perímetro</strong> son todos los bordes (la orilla). El <strong>área</strong> es todo lo de adentro (¡el queso y el pepperoni!).</p>
+                        </div>
+                    </div>
+                </div>
+                <h2>Tipos de Triángulos</h2>
+                <div class="triangle-types-grid">
+                    <div class="triangle-type-card">
+                        <h3>Equilátero</h3>
+                        <div class="triangle-visual equi-visual"></div>
+                        <p>¡Sus 3 lados son iguales! Es el triángulo más justo y equilibrado.</p>
+                    </div>
+                    <div class="triangle-type-card">
+                        <h3>Isósceles</h3>
+                        <div class="triangle-visual iso-visual"></div>
+                        <p>Tiene 2 lados iguales. ¡Es como si tuviera dos brazos del mismo tamaño!</p>
+                    </div>
+                    <div class="triangle-type-card">
+                        <h3>Escaleno</h3>
+                        <div class="triangle-visual sca-visual"></div>
+                        <p>¡Sus 3 lados son diferentes! Es un triángulo único y sin reglas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Calcular Section -->
+            <section id="calcular-content" class="content-section">
+                <div class="controls-wrapper">
+                    <h2>Calculadora Interactiva de Área</h2>
+                    <div class="interactive-calculator">
+                        <div class="visual-wrapper">
+                            <div id="dynamic-triangle"></div>
+                        </div>
+                        <div class="sliders-area">
+                            <div class="slider-group">
+                                <label for="base-slider">Base del triángulo: <span id="base-value" class="slider-value"></span></label>
+                                <input type="range" id="base-slider" min="20" max="300" value="150">
+                            </div>
+                            <div class="slider-group">
+                                <label for="height-slider">Altura del triángulo: <span id="height-value" class="slider-value"></span></label>
+                                <input type="range" id="height-slider" min="20" max="200" value="100">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="results-area">
+                        Mueve las barras para ver los resultados...
+                    </div>
+                    <div id="conversion-box">
+                        Aquí verás la conversión a metros...
+                    </div>
+                </div>
+            </section>
+            <!-- Practicar Section -->
+            <section id="practicar-content" class="content-section">
+                <h2>¡A Practicar!</h2>
+                <div class="exercise-grid">
+                    <div class="exercise-card">
+                        <h4>🍕 Rebanada de Pizza</h4>
+                        <p>Una rebanada de pizza triangular tiene una base de 15 cm y una altura de 20 cm. ¿Cuál es su área?</p>
+                    </div>
+                    <div class="exercise-card">
+                        <h4>🚩 Banderín de Fiesta</h4>
+                        <p>Un banderín triangular tiene lados que miden 12 cm, 12 cm y 10 cm. ¿Cuál es su perímetro?</p>
+                    </div>
+                    <div class="exercise-card">
+                        <h4>📐 Sombra de un Cono</h4>
+                        <p>La sombra de un cono de tráfico es un triángulo con un área de 300 cm² y una base de 30 cm. ¿Cuál es su altura?</p>
+                    </div>
+                    <div class="exercise-card">
+                        <h4>🧩 Desafío Final</h4>
+                        <p>Un triángulo isósceles tiene un perímetro de 40 cm. Su base mide 10 cm. ¿Cuánto miden los otros dos lados?</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="js/triangulo.js"></script>
+</body>
+</html>

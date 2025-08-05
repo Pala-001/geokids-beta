@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoKids - El Círculo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/circulo.css">
+</head>
+<body>
+    <div class="browser-window">
+        <header class="main-header">
+            <div class="logo-title-group">
+                <div class="logo"></div>
+                <h1>El Círculo</h1>
+            </div>
+            <a href="inicio.html" class="home-button" title="Home">🏠</a>
+        </header>
+        <nav class="main-nav">
+            <button data-tab="aprender" class="active">Aprender</button>
+            <button data-tab="calcular">Calcular</button>
+            <button data-tab="practicar">Practicar</button>
+        </nav>
+        <main>
+            <!-- Aprender Section -->
+            <section id="aprender-content" class="content-section active">
+                <div class="info-section">
+                    <div class="circle-definition">
+                        <h2>¿Qué es un Círculo?</h2>
+                        <p>Un círculo es una figura redondita y perfecta. Todos los puntos de su borde están a la misma distancia de un punto central. ¡Como una rueda, un plato o el sol!</p>
+                    </div>
+                </div>
+
+                <div class="parts-section">
+                    <h2>Las Partes Secretas del Círculo</h2>
+                    <div class="parts-grid">
+                        <div class="part-card radius">
+                            <h4>🔵 Radio</h4>
+                            <p>Es la distancia desde el centro hasta el borde. ¡Como un rayo de sol!</p>
+                        </div>
+                        <div class="part-card diameter">
+                            <h4>🟢 Diámetro</h4>
+                            <p>Es la línea que cruza el círculo por el centro. ¡Mide el doble que el radio!</p>
+                        </div>
+                        <div class="part-card circumference">
+                            <h4>🟡 Circunferencia</h4>
+                            <p>¡Es todo el borde del círculo! Si lo estiraras, sería el perímetro.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="formulas-section">
+                    <h3>Fórmulas Mágicas del Círculo</h3>
+                    <div class="formulas-content-wrapper">
+                        <div class="formulas-container">
+                            <div class="formula-box">
+                                <h4>📏 Circunferencia (Perímetro)</h4>
+                                <p>C = 2 × π × radio</p>
+                            </div>
+                            <div class="formula-box">
+                                <h4>🔲 Área</h4>
+                                <p>Área = π × radio²</p>
+                            </div>
+                        </div>
+                        <div class="reminder-box">
+                            <p>💡 <strong>Recuerda:</strong> ¡Imagina una galleta! La <strong>circunferencia</strong> es el borde. El <strong>área</strong> es toda la galleta. Y <strong>Pi (π)</strong> es el ingrediente secreto, ¡que vale casi 3.14!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Calcular Section -->
+            <section id="calcular-content" class="content-section">
+                <div class="controls-wrapper">
+                    <h2>Calculadora Interactiva</h2>
+                    <div class="interactive-calculator">
+                        <div class="visual-wrapper">
+                            <div id="dynamic-circle"></div>
+                        </div>
+                        <div class="sliders-area">
+                             <div class="slider-group">
+                                <label for="radius-slider">Mueve para cambiar el Radio: <span id="radius-value" class="slider-value"></span></label>
+                                <input type="range" id="radius-slider" min="10" max="120" value="60">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="results-area">
+                        Mueve la barra para ver los resultados...
+                    </div>
+                    <div id="conversion-box">
+                        Aquí verás la conversión a metros...
+                    </div>
+                </div>
+            </section>
+            <!-- Practicar Section -->
+            <section id="practicar-content" class="content-section">
+                <h2>¡A Practicar!</h2>
+                <div class="exercise-grid">
+                    <div class="exercise-card">
+                        <h4>🍕 Pizza Familiar</h4>
+                        <p>Una pizza circular tiene un radio de 20 cm. ¿Cuál es su área? ¿Y su circunferencia?</p>
+                    </div>
+                    <div class="exercise-card">
+                        <h4>🎯 Diana de Dardos</h4>
+                        <p>El círculo central de una diana tiene un área de 28.27 cm². ¿Cuánto mide su radio?</p>
+                    </div>
+                    <div class="exercise-card">
+                        <h4>🎡 Rueda de la Fortuna</h4>
+                        <p>La circunferencia de una rueda de la fortuna es de 94.2 metros. ¿Cuál es su radio?</p>
+                    </div>
+                    <div class="exercise-card">
+                        <h4>🧩 Desafío Final</h4>
+                        <p>Si el diámetro de un círculo es 10 m, ¿cuál es su área y su circunferencia?</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="js/circulo.js"></script>
+</body>
+</html>
